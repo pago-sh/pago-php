@@ -1,0 +1,405 @@
+# LicenseKeys
+
+## Overview
+
+### Available Operations
+
+* [list](#list) - List License Keys
+* [get](#get) - Get License Key
+* [update](#update) - Update License Key
+* [getActivation](#getactivation) - Get Activation
+* [validate](#validate) - Validate License Key
+* [activate](#activate) - Activate License Key
+* [deactivate](#deactivate) - Deactivate License Key
+
+## list
+
+Get license keys connected to the given organization & filters.
+
+**Scopes**: `license_keys:read` `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:list" method="get" path="/v1/license-keys/" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$responses = $sdk->licenseKeys->list(
+    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',
+    page: 1,
+    limit: 10
+
+);
+
+
+foreach ($responses as $response) {
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `organizationId`                                                                              | [string\|array\|null](../../Models/Operations/LicenseKeysListQueryParamOrganizationIDFilter.md) | :heavy_minus_sign:                                                                            | Filter by organization ID.                                                                    |
+| `benefitId`                                                                                   | [string\|array\|null](../../Models/Operations/QueryParamBenefitIDFilter.md)                   | :heavy_minus_sign:                                                                            | Filter by benefit ID.                                                                         |
+| `page`                                                                                        | *?int*                                                                                        | :heavy_minus_sign:                                                                            | Page number, defaults to 1.                                                                   |
+| `limit`                                                                                       | *?int*                                                                                        | :heavy_minus_sign:                                                                            | Size of a page, defaults to 10. Maximum is 100.                                               |
+
+### Response
+
+**[?Operations\LicenseKeysListResponse](../../Models/Operations/LicenseKeysListResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\Unauthorized        | 401                        | application/json           |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## get
+
+Get a license key.
+
+**Scopes**: `license_keys:read` `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:get" method="get" path="/v1/license-keys/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->licenseKeys->get(
+    id: '<value>'
+);
+
+if ($response->licenseKeyWithActivations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *string*           | :heavy_check_mark: | N/A                |
+
+### Response
+
+**[?Operations\LicenseKeysGetResponse](../../Models/Operations/LicenseKeysGetResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\Unauthorized        | 401                        | application/json           |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## update
+
+Update a license key.
+
+**Scopes**: `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:update" method="patch" path="/v1/license-keys/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$licenseKeyUpdate = new Components\LicenseKeyUpdate();
+
+$response = $sdk->licenseKeys->update(
+    id: '<value>',
+    licenseKeyUpdate: $licenseKeyUpdate
+
+);
+
+if ($response->licenseKeyRead !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `id`                                                                       | *string*                                                                   | :heavy_check_mark:                                                         | N/A                                                                        |
+| `licenseKeyUpdate`                                                         | [Components\LicenseKeyUpdate](../../Models/Components/LicenseKeyUpdate.md) | :heavy_check_mark:                                                         | N/A                                                                        |
+
+### Response
+
+**[?Operations\LicenseKeysUpdateResponse](../../Models/Operations/LicenseKeysUpdateResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\Unauthorized        | 401                        | application/json           |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## getActivation
+
+Get a license key activation.
+
+**Scopes**: `license_keys:read` `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:get_activation" method="get" path="/v1/license-keys/{id}/activations/{activation_id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->licenseKeys->getActivation(
+    id: '<value>',
+    activationId: '<value>'
+
+);
+
+if ($response->licenseKeyActivationRead !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *string*           | :heavy_check_mark: | N/A                |
+| `activationId`     | *string*           | :heavy_check_mark: | N/A                |
+
+### Response
+
+**[?Operations\LicenseKeysGetActivationResponse](../../Models/Operations/LicenseKeysGetActivationResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\Unauthorized        | 401                        | application/json           |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## validate
+
+Validate a license key.
+
+**Scopes**: `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:validate" method="post" path="/v1/license-keys/validate" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Components\LicenseKeyValidate(
+    key: '<key>',
+    organizationId: '<value>',
+);
+
+$response = $sdk->licenseKeys->validate(
+    request: $request
+);
+
+if ($response->validatedLicenseKey !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Components\LicenseKeyValidate](../../Models/Components/LicenseKeyValidate.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\LicenseKeysValidateResponse](../../Models/Operations/LicenseKeysValidateResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## activate
+
+Activate a license key instance.
+
+**Scopes**: `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:activate" method="post" path="/v1/license-keys/activate" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Components\LicenseKeyActivate(
+    key: '<key>',
+    organizationId: '<value>',
+    label: '<value>',
+);
+
+$response = $sdk->licenseKeys->activate(
+    request: $request
+);
+
+if ($response->licenseKeyActivationRead !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Components\LicenseKeyActivate](../../Models/Components/LicenseKeyActivate.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\LicenseKeysActivateResponse](../../Models/Operations/LicenseKeysActivateResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\NotPermitted        | 403                        | application/json           |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## deactivate
+
+Deactivate a license key instance.
+
+**Scopes**: `license_keys:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="license_keys:deactivate" method="post" path="/v1/license-keys/deactivate" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Components\LicenseKeyDeactivate(
+    key: '<key>',
+    organizationId: '<value>',
+    activationId: '<value>',
+);
+
+$response = $sdk->licenseKeys->deactivate(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Components\LicenseKeyDeactivate](../../Models/Components/LicenseKeyDeactivate.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\LicenseKeysDeactivateResponse](../../Models/Operations/LicenseKeysDeactivateResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |

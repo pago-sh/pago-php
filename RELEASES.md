@@ -1,0 +1,431 @@
+
+
+## 2025-02-05 11:40:44
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.484.1 (2.503.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.0.3] .
+### Releases
+- [Composer v0.0.3] https://packagist.org/packages/pago-sh/sdk#v0.0.3 - .
+
+## 2025-02-19 08:07:38
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.495.1 (2.515.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.1.0] .
+### Releases
+- [Composer v0.1.0] https://packagist.org/packages/pago-sh/sdk#v0.1.0 - .
+
+## 2025-02-20 09:03:56
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.497.1 (2.517.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.1.1] .
+### Releases
+- [Composer v0.1.1] https://packagist.org/packages/pago-sh/sdk#v0.1.1 - .
+
+## 2025-03-07 00:17:18
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.513.2 (2.545.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.0] .
+### Releases
+- [Composer v0.2.0] https://packagist.org/packages/pago-sh/sdk#v0.2.0 - .
+
+## 2025-03-14 16:09:40
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.517.3 (2.548.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.1] .
+### Releases
+- [Composer v0.2.1] https://packagist.org/packages/pago-sh/sdk#v0.2.1 - .
+
+## 2025-03-20 11:04:19
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.521.0 (2.558.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.2] .
+### Releases
+- [Composer v0.2.2] https://packagist.org/packages/pago-sh/sdk#v0.2.2 - .
+
+## 2025-03-25 15:35:01
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.523.2 (2.560.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.3] .
+### Releases
+- [Composer v0.2.3] https://packagist.org/packages/pago-sh/sdk#v0.2.3 - .
+
+## 2025-04-02 08:02:28
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.527.1 (2.564.5) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.4] .
+### Releases
+- [Composer v0.2.4] https://packagist.org/packages/pago-sh/sdk#v0.2.4 - .
+
+## 2025-04-11 11:57:21
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.531.3 (2.570.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.5] .
+### Releases
+- [Composer v0.2.5] https://packagist.org/packages/pago-sh/sdk#v0.2.5 - .
+
+## 2025-04-16 00:18:13
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.533.0 (2.578.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.6] .
+### Releases
+- [Composer v0.2.6] https://packagist.org/packages/pago-sh/sdk#v0.2.6 - .
+
+## 2025-04-16 09:18:21
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.533.0 (2.578.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.7] .
+### Releases
+- [Composer v0.2.7] https://packagist.org/packages/pago-sh/sdk#v0.2.7 - .
+
+## 2025-04-17 14:18:17
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.533.0 (2.578.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.8] .
+### Releases
+- [Composer v0.2.8] https://packagist.org/packages/pago-sh/sdk#v0.2.8 - .
+
+## 2025-04-18 13:08:00
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.535.1 (2.585.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.9] .
+### Releases
+- [Composer v0.2.9] https://packagist.org/packages/pago-sh/sdk#v0.2.9 - .
+
+## 2025-04-30 09:17:46
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.540.1 (2.593.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.10] .
+### Releases
+- [Composer v0.2.10] https://packagist.org/packages/pago-sh/sdk#v0.2.10 - .
+
+## 2025-04-30 14:16:42
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.540.1 (2.593.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.11] .
+### Releases
+- [Composer v0.2.11] https://packagist.org/packages/pago-sh/sdk#v0.2.11 - .
+
+## 2025-05-15 11:34:50
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.545.0 (2.599.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.12] .
+### Releases
+- [Composer v0.2.12] https://packagist.org/packages/pago-sh/sdk#v0.2.12 - .
+
+## 2025-05-16 12:58:53
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.546.0 (2.603.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.13] .
+### Releases
+- [Composer v0.2.13] https://packagist.org/packages/pago-sh/sdk#v0.2.13 - .
+
+## 2025-05-22 00:18:52
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.546.0 (2.603.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.2.14] .
+### Releases
+- [Composer v0.2.14] https://packagist.org/packages/pago-sh/sdk#v0.2.14 - .
+
+## 2025-06-02 00:20:03
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.554.1 (2.616.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.3.0] .
+### Releases
+- [Composer v0.3.0] https://packagist.org/packages/pago-sh/sdk#v0.3.0 - .
+
+## 2025-06-12 08:33:12
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.561.0 (2.628.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.3.1] .
+### Releases
+- [Composer v0.3.1] https://packagist.org/packages/pago-sh/sdk#v0.3.1 - .
+
+## 2025-06-17 12:13:39
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.563.4 (2.630.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.3.2] .
+### Releases
+- [Composer v0.3.2] https://packagist.org/packages/pago-sh/sdk#v0.3.2 - .
+
+## 2025-06-18 12:46:12
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.564.1 (2.630.9) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.0] .
+### Releases
+- [Composer v0.4.0] https://packagist.org/packages/pago-sh/sdk#v0.4.0 - .
+
+## 2025-06-19 11:37:27
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.567.1 (2.632.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.1] .
+### Releases
+- [Composer v0.4.1] https://packagist.org/packages/pago-sh/sdk#v0.4.1 - .
+
+## 2025-07-15 00:20:34
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.581.2 (2.656.9) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.2] .
+### Releases
+- [Composer v0.4.2] https://packagist.org/packages/pago-sh/sdk#v0.4.2 - .
+
+## 2025-07-21 13:43:46
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.583.1 (2.658.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.3] .
+### Releases
+- [Composer v0.4.3] https://packagist.org/packages/pago-sh/sdk#v0.4.3 - .
+
+## 2025-08-11 00:21:44
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.600.2 (2.677.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.4] .
+### Releases
+- [Composer v0.4.4] https://packagist.org/packages/pago-sh/sdk#v0.4.4 - .
+
+## 2025-08-12 11:29:10
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.601.3 (2.680.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.5] .
+### Releases
+- [Composer v0.4.5] https://packagist.org/packages/pago-sh/sdk#v0.4.5 - .
+
+## 2025-08-20 00:18:20
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.606.0 (2.686.7) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.6] .
+### Releases
+- [Composer v0.4.6] https://packagist.org/packages/pago-sh/sdk#v0.4.6 - .
+
+## 2025-08-22 12:35:53
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.606.2 (2.687.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.7] .
+### Releases
+- [Composer v0.4.7] https://packagist.org/packages/pago-sh/sdk#v0.4.7 - .
+
+## 2025-09-05 00:18:10
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.609.0 (2.692.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.8] .
+### Releases
+- [Composer v0.4.8] https://packagist.org/packages/pago-sh/sdk#v0.4.8 - .
+
+## 2025-09-16 00:17:19
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.615.2 (2.698.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.4.9] .
+### Releases
+- [Composer v0.4.9] https://packagist.org/packages/pago-sh/sdk#v0.4.9 - .
+
+## 2025-09-22 10:13:37
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.622.1 (2.709.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.5.0] .
+### Releases
+- [Composer v0.5.0] https://packagist.org/packages/pago-sh/sdk#v0.5.0 - .
+
+## 2025-09-23 10:21:31
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.622.1 (2.709.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.5.1] .
+### Releases
+- [Composer v0.5.1] https://packagist.org/packages/pago-sh/sdk#v0.5.1 - .
+
+## 2025-09-29 00:18:59
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.631.4 (2.716.16) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.5.2] .
+### Releases
+- [Composer v0.5.2] https://packagist.org/packages/pago-sh/sdk#v0.5.2 - .
+
+## 2025-10-16 00:18:40
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.636.3 (2.723.11) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.5.3] .
+### Releases
+- [Composer v0.5.3] https://packagist.org/packages/pago-sh/sdk#v0.5.3 - .
+
+## 2025-10-16 12:58:02
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.636.3 (2.723.11) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.5.4] .
+### Releases
+- [Composer v0.5.4] https://packagist.org/packages/pago-sh/sdk#v0.5.4 - .
+
+## 2025-10-21 00:18:48
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.637.3 (2.727.9) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.6.0] .
+### Releases
+- [Composer v0.6.0] https://packagist.org/packages/pago-sh/sdk#v0.6.0 - .
+
+## 2025-10-21 13:14:26
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.637.3 (2.727.9) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.6.1] .
+### Releases
+- [Composer v0.6.1] https://packagist.org/packages/pago-sh/sdk#v0.6.1 - .
+
+## 2025-11-04 00:18:54
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.648.0 (2.737.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.7.0] .
+### Releases
+- [Composer v0.7.0] https://packagist.org/packages/pago-sh/sdk#v0.7.0 - .
+
+## 2026-01-13 14:57:12
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.685.0 (2.794.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.7.1] .
+### Releases
+- [Composer v0.7.1] https://packagist.org/packages/pago-sh/sdk#v0.7.1 - .
+
+## 2026-02-25 00:28:40
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.728.0 (2.839.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.8.0] .
+### Releases
+- [Composer v0.8.0] https://packagist.org/packages/pago-sh/sdk#v0.8.0 - .
+
+## 2026-03-26 00:30:26
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.759.3 (2.869.25) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.9.0] .
+### Releases
+- [Composer v0.9.0] https://packagist.org/packages/pago-sh/sdk#v0.9.0 - .
+
+## 2026-04-03 06:29:30
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.761.1 (2.879.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.10.0] .
+### Releases
+- [Composer v0.10.0] https://packagist.org/packages/pago-sh/sdk#v0.10.0 - .

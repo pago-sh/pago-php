@@ -1,0 +1,223 @@
+# Events
+
+## Overview
+
+### Available Operations
+
+* [list](#list) - List Events
+* [listNames](#listnames) - List Event Names
+* [get](#get) - Get Event
+* [ingest](#ingest) - Ingest Events
+
+## list
+
+List events.
+
+**Scopes**: `events:read` `events:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="events:list" method="get" path="/v1/events/" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Operations;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Operations\EventsListRequest(
+    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',
+);
+
+$response = $sdk->events->list(
+    request: $request
+);
+
+if ($response->responseEventsList !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `$request`                                                                   | [Operations\EventsListRequest](../../Models/Operations/EventsListRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+### Response
+
+**[?Operations\EventsListResponse](../../Models/Operations/EventsListResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## listNames
+
+List event names.
+
+**Scopes**: `events:read` `events:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="events:list_names" method="get" path="/v1/events/names" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Operations;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Operations\EventsListNamesRequest(
+    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',
+);
+
+$responses = $sdk->events->listNames(
+    request: $request
+);
+
+
+foreach ($responses as $response) {
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\EventsListNamesRequest](../../Models/Operations/EventsListNamesRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\EventsListNamesResponse](../../Models/Operations/EventsListNamesResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## get
+
+Get an event by ID.
+
+**Scopes**: `events:read` `events:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="events:get" method="get" path="/v1/events/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->events->get(
+    id: '<value>'
+);
+
+if ($response->event !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *string*           | :heavy_check_mark: | The event ID.      |
+
+### Response
+
+**[?Operations\EventsGetResponse](../../Models/Operations/EventsGetResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## ingest
+
+Ingest batch of events.
+
+**Scopes**: `events:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="events:ingest" method="post" path="/v1/events/ingest" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Components\EventsIngest(
+    events: [],
+);
+
+$response = $sdk->events->ingest(
+    request: $request
+);
+
+if ($response->eventsIngestResponse !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `$request`                                                         | [Components\EventsIngest](../../Models/Components/EventsIngest.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
+
+### Response
+
+**[?Operations\EventsIngestResponse](../../Models/Operations/EventsIngestResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |

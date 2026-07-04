@@ -1,0 +1,11 @@
+# FilesListRequest
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `organizationId`                                                                        | [string\|array\|null](../../Models/Operations/FilesListQueryParamOrganizationIDFilter.md) | :heavy_minus_sign:                                                                      | Filter by organization ID.                                                              |
+| `ids`                                                                                   | [string\|array\|null](../../Models/Operations/FileIDFilter.md)                          | :heavy_minus_sign:                                                                      | Filter by file ID.                                                                      |
+| `page`                                                                                  | *?int*                                                                                  | :heavy_minus_sign:                                                                      | Page number, defaults to 1.                                                             |
+| `limit`                                                                                 | *?int*                                                                                  | :heavy_minus_sign:                                                                      | Size of a page, defaults to 10. Maximum is 100.                                         |

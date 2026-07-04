@@ -1,0 +1,282 @@
+# CustomFields
+
+## Overview
+
+### Available Operations
+
+* [list](#list) - List Custom Fields
+* [create](#create) - Create Custom Field
+* [get](#get) - Get Custom Field
+* [delete](#delete) - Delete Custom Field
+* [update](#update) - Update Custom Field
+
+## list
+
+List custom fields.
+
+**Scopes**: `custom_fields:read` `custom_fields:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="custom-fields:list" method="get" path="/v1/custom-fields/" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Operations;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CustomFieldsListRequest(
+    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',
+);
+
+$responses = $sdk->customFields->list(
+    request: $request
+);
+
+
+foreach ($responses as $response) {
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CustomFieldsListRequest](../../Models/Operations/CustomFieldsListRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\CustomFieldsListResponse](../../Models/Operations/CustomFieldsListResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## create
+
+Create a custom field.
+
+**Scopes**: `custom_fields:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="custom-fields:create" method="post" path="/v1/custom-fields/" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Components\CustomFieldCreateSelect(
+    slug: '<value>',
+    name: '<value>',
+    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',
+    properties: new Components\CustomFieldSelectProperties(
+        options: [],
+    ),
+);
+
+$response = $sdk->customFields->create(
+    request: $request
+);
+
+if ($response->customField !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                                                                    | Type                                                                                                                                                                                                                         | Required                                                                                                                                                                                                                     | Description                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                                                   | [Components\CustomFieldCreateText\|Components\CustomFieldCreateNumber\|Components\CustomFieldCreateDate\|Components\CustomFieldCreateCheckbox\|Components\CustomFieldCreateSelect](../../Models/Components/CustomFieldCreate.md) | :heavy_check_mark:                                                                                                                                                                                                           | The request object to use for the request.                                                                                                                                                                                   |
+
+### Response
+
+**[?Operations\CustomFieldsCreateResponse](../../Models/Operations/CustomFieldsCreateResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## get
+
+Get a custom field by ID.
+
+**Scopes**: `custom_fields:read` `custom_fields:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="custom-fields:get" method="get" path="/v1/custom-fields/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->customFields->get(
+    id: '<value>'
+);
+
+if ($response->customField !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `id`                 | *string*             | :heavy_check_mark:   | The custom field ID. |
+
+### Response
+
+**[?Operations\CustomFieldsGetResponse](../../Models/Operations/CustomFieldsGetResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## delete
+
+Delete a custom field.
+
+**Scopes**: `custom_fields:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="custom-fields:delete" method="delete" path="/v1/custom-fields/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->customFields->delete(
+    id: '<value>'
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `id`                 | *string*             | :heavy_check_mark:   | The custom field ID. |
+
+### Response
+
+**[?Operations\CustomFieldsDeleteResponse](../../Models/Operations/CustomFieldsDeleteResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## update
+
+Update a custom field.
+
+**Scopes**: `custom_fields:write`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="custom-fields:update" method="patch" path="/v1/custom-fields/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Pago;
+use Pago\Models\Components;
+
+$sdk = Pago\Pago::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->customFields->update(
+    id: '<value>',
+    customFieldUpdate: new Components\CustomFieldUpdateDate()
+
+);
+
+if ($response->customField !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                                                                    | Type                                                                                                                                                                                                                         | Required                                                                                                                                                                                                                     | Description                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                                                                                                                                         | *string*                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                                           | The custom field ID.                                                                                                                                                                                                         |
+| `customFieldUpdate`                                                                                                                                                                                                          | [Components\CustomFieldUpdateText\|Components\CustomFieldUpdateNumber\|Components\CustomFieldUpdateDate\|Components\CustomFieldUpdateCheckbox\|Components\CustomFieldUpdateSelect](../../Models/Components/CustomFieldUpdate.md) | :heavy_check_mark:                                                                                                                                                                                                           | N/A                                                                                                                                                                                                                          |
+
+### Response
+
+**[?Operations\CustomFieldsUpdateResponse](../../Models/Operations/CustomFieldsUpdateResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\ResourceNotFound    | 404                        | application/json           |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |

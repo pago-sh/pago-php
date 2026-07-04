@@ -1,0 +1,59 @@
+# EventMetadataOutput
+
+
+## Supported Types
+
+### `string`
+
+```php
+/**
+* @var string
+*/
+string $value = /* values here */
+```
+
+### `int`
+
+```php
+/**
+* @var int
+*/
+int $value = /* values here */
+```
+
+### `float`
+
+```php
+/**
+* @var float
+*/
+float $value = /* values here */
+```
+
+### `bool`
+
+```php
+/**
+* @var bool
+*/
+bool $value = /* values here */
+```
+
+### `Components\CostMetadataOutput`
+
+```php
+/**
+* @var \Pago\Models\Components\CostMetadataOutput
+*/
+Components\CostMetadataOutput $value = /* values here */
+```
+
+### `Components\LLMMetadata`
+
+```php
+/**
+* @var \Pago\Models\Components\LLMMetadata
+*/
+Components\LLMMetadata $value = /* values here */
+```
+

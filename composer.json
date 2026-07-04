@@ -1,0 +1,53 @@
+{
+  "name": "pago-sh/sdk",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Pago\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2",
+    "galbar/jsonpath": ">=3.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "speakeasy/serializer": "^4.0.3",
+    "brick/date-time": ">=0.7.0",
+    "phpdocumentor/type-resolver": ">=1.8",
+    "brick/math": ">=0.12.1"
+  },
+  "require-dev": {
+    "laravel/pint": "1.29.0",
+    "phpstan/phpstan": "2.1.44",
+    "phpunit/phpunit": ">=10",
+    "roave/security-advisories": "dev-latest",
+    "orchestra/testbench": ">=9.6"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "sort-packages": true,
+    "process-timeout": 60
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pago\\PackageServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": [
+      "./vendor/bin/phpunit --testdox --display-warnings --colors=always"
+    ],
+    "stan": [
+      "./vendor/bin/phpstan analyse --memory-limit=2g --error-format=table"
+    ]
+  },
+  "script-descriptions": {
+    "test": "Run PhpUnit test scripts.",
+    "stan": "Run PhpStan static analysis."
+  }
+}
