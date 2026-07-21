@@ -1,8 +1,6 @@
-.env
-.env.local
-**/.speakeasy/temp/
-**/.speakeasy/logs/
-.speakeasy/temp/
-composer.lock
-vendor
+/vendor/
+/composer.lock
+/.phpunit.cache/
+/phpunit.xml
+/phpstan.neon
 .DS_Store

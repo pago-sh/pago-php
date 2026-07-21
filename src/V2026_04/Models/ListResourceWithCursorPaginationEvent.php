@@ -1,0 +1,60 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Pago\V2026_04\Models;
+
+use Pago\Contracts\Deserializable;
+use Pago\Contracts\Model;
+use Pago\Serialization\Json;
+use Pago\Serialization\Union;
+
+/**
+ * ListResourceWithCursorPaginationEvent
+ */
+final class ListResourceWithCursorPaginationEvent implements Model, Deserializable
+{
+    public function __construct(
+        /**
+         * @var list<Event>
+         */
+        public readonly array $items,
+        public readonly CursorPagination $pagination,
+    ) {
+    }
+
+    /**
+     * @param array<string, mixed> $data
+     */
+    public static function fromArray(array $data): self
+    {
+        /** @var list<Event> $items */
+        $items = array_map(static fn (mixed $item0): Event => EventFactory::fromArray(Json::toMap($item0)), Json::toList(Json::get($data, 'items')));
+        $pagination = CursorPagination::fromArray(Json::toMap(Json::get($data, 'pagination')));
+
+        return new self(
+            items: $items,
+            pagination: $pagination,
+        );
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function toArray(): array
+    {
+        $data = [];
+        $data['items'] = Json::encode($this->items);
+        $data['pagination'] = Json::encode($this->pagination);
+
+        return $data;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function jsonSerialize(): array
+    {
+        return $this->toArray();
+    }
+}

@@ -1,53 +1,53 @@
 {
-  "name": "pago-sh/sdk",
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "Pago\\": "src/"
-    }
-  },
-  "license": "MIT",
-  "require": {
-    "php": ">=8.2",
-    "galbar/jsonpath": ">=3.0",
-    "guzzlehttp/guzzle": "^7.0",
-    "speakeasy/serializer": "^4.0.3",
-    "brick/date-time": ">=0.7.0",
-    "phpdocumentor/type-resolver": ">=1.8",
-    "brick/math": ">=0.12.1"
-  },
-  "require-dev": {
-    "laravel/pint": "1.29.0",
-    "phpstan/phpstan": "2.1.44",
-    "phpunit/phpunit": ">=10",
-    "roave/security-advisories": "dev-latest",
-    "orchestra/testbench": ">=9.6"
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true,
-  "config": {
-    "optimize-autoloader": true,
-    "classmap-authoritative": true,
-    "sort-packages": true,
-    "process-timeout": 60
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Pago\\PackageServiceProvider"
-      ]
-    }
-  },
-  "scripts": {
-    "test": [
-      "./vendor/bin/phpunit --testdox --display-warnings --colors=always"
+    "name": "pago-sh/sdk",
+    "description": "Pago SDK — A billing platform for the intelligence era",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["pago", "sdk", "api", "billing", "payments"],
+    "homepage": "https://pago.sh",
+    "support": {
+        "issues": "https://github.com/pago-sh/pago/issues",
+        "source": "https://github.com/pago-sh/pago"
+    },
+    "authors": [
+        {
+            "name": "Pago",
+            "homepage": "https://pago.sh"
+        }
     ],
-    "stan": [
-      "./vendor/bin/phpstan analyse --memory-limit=2g --error-format=table"
-    ]
-  },
-  "script-descriptions": {
-    "test": "Run PhpUnit test scripts.",
-    "stan": "Run PhpStan static analysis."
-  }
+    "require": {
+        "php": ">=8.2",
+        "ext-json": "*",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.1 || ^2.0",
+        "php-http/discovery": "^1.19"
+    },
+    "require-dev": {
+        "nyholm/psr7": "^1.8",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pago\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pago\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": "phpstan analyse --no-progress --memory-limit=4G",
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
